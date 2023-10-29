@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {environment} from '../environments/environment'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-crash';
+  enviormentName="test";
+  production = false;
+
+  constructor(){
+     this.enviormentName = environment.enviormentName;
+     this.production = environment.production;
+  }
+ 
 }
